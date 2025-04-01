@@ -32,7 +32,7 @@ network = nn.Network([784,20,10,10],['r','r','sof'])
 his = network.training(x_train,y_train,0.01,200,10000) #inputs: training x, y, learning_rate,epoch, total_training_num
 plt.plot(his)
 plt.show()
-n = int(input("enter"))
+n = int(input("enter x_test number: "))
 predicted_label = np.argmax(network.forward_feed(x_test[n]))
 actual_label = np.argmax(y_test[n])
 print(f"Predicted: {predicted_label}, Actual: {actual_label}")
